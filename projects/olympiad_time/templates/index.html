@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Список Учеников</h2>
+<ul>
+    {% for student in students %}
+    <li><a href="{{ url_for('student', student_id=student['id']) }}">{{ student['name'] }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

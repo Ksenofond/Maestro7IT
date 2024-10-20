@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Результаты олимпиады</h2>
+<table>
+    <tr>
+        <th>Имя студента</th>
+        <th>Баллы</th>
+    </tr>
+    {% for student in students %}
+    <tr>
+        <td>{{ student.name }}</td>
+        <td>{{ student.score }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
